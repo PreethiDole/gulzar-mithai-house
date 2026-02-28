@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact - Gulzar Mithai House</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <h2>Gulzar Mithai House</h2>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<section class="container">
+  <h2>Visit Us</h2>
+  <p>21, Charminar Road, Hyderabad</p>
+  <p>Phone: +91 98765 43210</p>
+  <p>Email: gulzarmithai@gmail.com</p>
+  <p>Open Daily: 9:00 AM – 10:30 PM</p>
+</section>
+
+<footer>
+  <p>© 2026 Gulzar Mithai House</p>
+</footer>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+/* Scroll Reveal */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade-in").forEach(el => {
+  observer.observe(el);
+});
+</script>
+</body>
+</html>

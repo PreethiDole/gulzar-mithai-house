@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu - Gulzar Mithai House</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <h2>Gulzar Mithai House</h2>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<section class="container fade-in scroll-box">
+  <h2 class="section-title">Our Menu</h2>
+
+  <!-- Classic Sweets -->
+  <div class="menu-category">
+    <h3>Classic Sweets</h3>
+
+    <div class="menu-item">
+      <div>
+        <span class="item-name">Kaju Katli</span>
+        <p class="item-desc">Premium cashew fudge crafted traditionally.</p>
+      </div>
+      <span class="price">₹880 / kg</span>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <span class="item-name">Milk Peda</span>
+        <p class="item-desc">Soft milk-based sweet with cardamom aroma.</p>
+      </div>
+      <span class="price">₹540 / kg</span>
+    </div>
+
+  </div>
+
+  <!-- Festive Specials -->
+  <div class="menu-category">
+    <h3>Festive Specials</h3>
+
+    <div class="menu-item">
+      <div>
+        <span class="item-name">Motichoor Laddu</span>
+        <p class="item-desc">Hand-rolled laddus made with pure desi ghee.</p>
+      </div>
+      <span class="price">₹620 / kg</span>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <span class="item-name">Mysore Pak</span>
+        <p class="item-desc">Golden ghee sweet with melt-in-mouth texture.</p>
+      </div>
+      <span class="price">₹760 / kg</span>
+    </div>
+
+  </div>
+
+  <!-- Dry Fruit Collection -->
+  <div class="menu-category">
+    <h3>Dry Fruit Collection</h3>
+
+    <div class="menu-item">
+      <div>
+        <span class="item-name">Anjeer Barfi</span>
+        <p class="item-desc">Fig-based sweet packed with premium dry fruits.</p>
+      </div>
+      <span class="price">₹980 / kg</span>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <span class="item-name">Pista Roll</span>
+        <p class="item-desc">Green pistachio layer with smooth cashew center.</p>
+      </div>
+      <span class="price">₹1050 / kg</span>
+    </div>
+
+  </div>
+
+</section>
+<footer>
+  <p>© 2026 Gulzar Mithai House</p>
+</footer>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+/* Scroll Reveal */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade-in").forEach(el => {
+  observer.observe(el);
+});
+</script>
+</body>
+</html>

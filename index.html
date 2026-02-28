@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gulzar Mithai House</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <h2>Gulzar Mithai House</h2>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Handcrafted Indian Sweets Since 1995</h1>
+    <p>Made with tradition, purity, and love.</p>
+    <a href="menu.html" class="btn">Explore Our Sweets</a>
+  </div>
+</section>
+
+<section class="container fade-in scroll-box">
+  <h2>Featured Sweets</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>Kaju Katli</h3>
+      <p>Premium cashew fudge crafted to perfection.</p>
+      <div class="price">₹880 / kg</div>
+    </div>
+    <div class="card">
+      <h3>Motichoor Laddu</h3>
+      <p>Soft laddus made with pure desi ghee.</p>
+      <div class="price">₹620 / kg</div>
+    </div>
+    <div class="card">
+      <h3>Anjeer Barfi</h3>
+      <p>Fig-based sweet packed with nuts.</p>
+      <div class="price">₹980 / kg</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Gulzar Mithai House | Hyderabad</p>
+</footer>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+/* Scroll Reveal */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade-in").forEach(el => {
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
