@@ -1,0 +1,356 @@
+/* ========================
+   ROOT VARIABLES
+======================== */
+:root {
+  --primary: #8B0000;
+  --accent: #D4AF37;
+  --background: #FFF8E7;
+  --text-dark: #3E2723;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+/* ========================
+   GLOBAL STYLES
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--primary) var(--background);
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* ========================
+   NAVBAR + HAMBURGER
+======================== */
+.navbar {
+  background: var(--primary);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--white);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+/* ========================
+   HERO SECTION
+======================== */
+.hero {
+  height: 90vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url('https://images.unsplash.com/photo-1606313564200-e75d5e30476c');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: var(--text-dark);
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--white);
+  transform: translateY(-3px);
+}
+
+/* ========================
+   FEATURED GRID
+======================== */
+.grid {
+  display: grid;
+  gap: 25px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ========================
+   MENU TYPOGRAPHY
+======================== */
+.menu-category {
+  margin-bottom: 50px;
+}
+
+.menu-category h3 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+  transition: var(--transition);
+}
+
+.menu-item:hover {
+  background: rgba(0,0,0,0.03);
+  padding-left: 10px;
+}
+
+.menu-item span:first-child {
+  font-weight: 500;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--primary);
+  min-width: 80px;
+  text-align: right;
+}
+
+/* ========================
+   MENU GRID CARDS
+======================== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.menu-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.menu-content {
+  padding: 20px;
+}
+
+.menu-content h3 {
+  margin-bottom: 10px;
+}
+
+.menu-content p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/* ========================
+   SECTION TITLE
+======================== */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: var(--accent);
+  display: block;
+  margin: 15px auto 0;
+}
+
+/* ========================
+   SCROLL ANIMATIONS
+======================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================
+   CUSTOM SCROLLBAR
+======================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 25px 0;
+}
+
+/* ========================
+   SCROLL BOX (OPTIONAL)
+======================== */
+.scroll-box {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .grid-3,
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background: var(--primary);
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
